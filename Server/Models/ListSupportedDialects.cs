@@ -1,16 +1,15 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 
-namespace Server.Models
+namespace Server.Models;
+
+[DataContract]
+public class ListSupportedDialects
 {
-    [DataContract]
-    public class ListSupportedDialects
-    {
-        /// <summary>
-        /// List of dialects supported by the Service Provider
-        /// </summary>
-        [AllowNull]
-        [DataMember]
-        public List<Uri>? DataDialects { get; set; }
-    }
+    /// <summary>
+    /// List of dialects supported by the Service Provider
+    /// </summary>
+    [AllowNull]
+    [DataMember]
+    public List<Uri>? DataDialects { get; set; }
 }

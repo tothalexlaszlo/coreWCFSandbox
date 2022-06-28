@@ -1,12 +1,11 @@
-﻿using CoreWCF;
+using CoreWCF;
 using Server.Models;
 
-namespace Server.Services
+namespace Server.Services;
+
+[ServiceContract]
+public interface ISampleService
 {
-    [ServiceContract]
-    public interface ISampleService
-    {
-        [OperationContract]
-        WSMPRequestResponseRP GetResourcePropertyDocument();
-    }
+    [OperationContract]
+    WSMPRequestResponseRP GetResourcePropertyDocument();
 }
